@@ -1,0 +1,14 @@
+
+.btn {
+    border-radius: 25px;
+    color: white;
+    border: none;
+
+    @include primary-gradient;
+    @include drop-shadow;
+
+    &:hover {
+        @include hover-gradient;
+        @include hover-drop-shadow;
+    }
+}

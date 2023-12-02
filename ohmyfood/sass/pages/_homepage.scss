@@ -1,0 +1,215 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-alt;
+
+    &__title {
+        padding: 39px 58px 9px 42px;
+        text-align: center;
+
+    }
+
+    &__subtitle {
+        padding: 0 26px 0 35px;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 27px 75px 57px 82px;
+        width: 218px;
+        height: 50px;
+    }
+
+    
+    @media (min-width: $max-width) {
+        
+        &__title {
+            font-size: $font-size-desktop-header;
+        }
+
+        &__subtitle {
+            margin-top: 25px;
+        }
+
+        &__btn {
+            margin: 27px 75px 30px 82px;
+        }
+    }
+}
+
+.how-it-works {
+
+    padding: 48px 20px 68px 20px;
+
+    &__cards {
+        // Making the cards into a column
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+        gap: 25px;
+        
+
+        &--card {
+
+            // Making the card content into a row
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+
+
+            padding: 29px 0;
+            gap: 24px;
+
+            // Make the position of the card element relative to the flow of the page
+            position: relative;
+
+            // Styling the numerical steps
+            &--step {
+
+                @include h3-like;
+                // Centering the step numbers
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                // Positioning it absolutely based on it's parent element.
+                position: absolute;
+                left: -12px;
+
+                //Defining a 1:1 aspect ratio 
+                width: 24px;
+                height: 24px;
+
+                // Make the background a circle
+                border-radius: 50%;
+
+                // Defining Purple Color
+                background-color: $primary-color;
+            }
+
+            &--icon {
+                padding-left: 33.5px;
+                color: $secondary-icon-color;
+
+                &--purple {
+                    @extend .how-it-works__cards--card--icon;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $tablet-max) {
+
+        padding: 48px 180px 68px 180px;
+        &__title {
+            text-align: center;
+        }
+            
+    }
+
+    @media (min-width: $max-width) {
+        
+        padding: 48px 180px 68px 180px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+ 
+        &__cards {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 12px;
+        
+            &--card {
+                flex: calc(100%/3 - 25px);
+            }
+        }
+    }
+
+
+}
+
+.restaurants {
+
+    padding: 30px 18px 0 17px;
+    background-color: $bg-alt;
+    
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 54px 0 66px 0;
+
+
+        &--card {
+            position: relative;
+            width: 100%;
+
+            &:is(.card--isNew) {
+                &::before {
+                    content: "Nouveau";
+                    position: absolute;
+                    background-color: $tertiary-color;
+
+                    @include h3-like;
+                    color: $quaternary-color;
+
+                    padding: 7px 9px;
+                    border-radius: 2px;
+
+                    right: 15px; // Align to the right with 15px spacing
+                    top: 15px; // Add spacing from the top
+
+
+                    @include drop-shadow;
+                }
+            }
+
+            &--img {
+                object-fit: cover;
+                height: 251px;
+                border-radius: 15px 15px 0 0;
+                width: 100%;
+            }
+
+            &--content {
+                padding: 16px 25px 12px 16px;
+                display: flex;
+                justify-content: space-between;
+
+                &--text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $max-width) {
+
+        padding: 30px 180px;
+
+        &__cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 28px 0 30px 0;
+            gap: 50px 100px;
+
+
+
+            a {
+                flex: calc(50% - 100px);
+            }
+        }
+    }
+}
+

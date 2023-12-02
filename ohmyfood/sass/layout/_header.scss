@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+
+    &__logo {
+        padding: 14px 19px 14px 16px;
+        
+    }
+
+    &__secondary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        width: 100%;
+
+        background-color: $senary-color;
+        padding: 17px;
+
+        &--text-input {
+            background: none;
+            border: none;
+            width: auto;
+            
+            @include h2-like;
+        }
+
+        &--location-dot {
+            color: $primary-icon-color;
+        }        
+    }
+
+    &__withArrow {
+        position: absolute;
+        left: 10;
+        
+    }
+
+}

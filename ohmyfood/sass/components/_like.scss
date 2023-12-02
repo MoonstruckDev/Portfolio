@@ -1,0 +1,86 @@
+.fa-solid {
+    position: relative;
+  }
+  
+.fa-regular {
+    position: absolute;
+  }
+  
+  .heart-icon,
+  .heart-icon-solid {
+    font-size: 30px;
+  }
+
+    
+  .heart-icon-solid {
+    transform-origin: bottom;
+    transform: scale(0);
+    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .like {
+
+    &__input {
+      display: none;
+    }
+    &__checkbox {
+      &:not(:checked) + .like__container .heart-icon:hover {
+        animation: 1.5s ease 0s infinite beat; }
+
+      &:checked + .like__container {
+        .heart-icon-solid {animation: like 0.7s cubic-bezier(.87, .01, .38, 1.01) forwards;}
+        .heart-icon { animation: like--BG 1s ease forwards; }
+      }
+      
+      &:not(:checked) + .like__container { 
+        .heart-icon-solid { animation: unlike 0.5s ease forwards; }
+        .heart-icon { animation: nounlike 1s ease forwards; }
+      }
+    }
+  }
+
+  @keyframes beat {
+    0%, 50%, 100% { transform: scale(1, 1); }
+    30%, 80% { transform: scale(0.82, 0.85); }
+  }
+
+  @keyframes like {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  @keyframes like--BG {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes unlike {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  

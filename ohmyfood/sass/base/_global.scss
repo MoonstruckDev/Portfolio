@@ -1,0 +1,8 @@
+// Added to root since it doesn't work on body https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+}

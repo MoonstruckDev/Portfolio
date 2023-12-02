@@ -1,0 +1,17 @@
+.card {
+    border-radius: 20px;
+    background-color: white; 
+    
+    @include drop-shadow;
+
+    &--isGrey {
+
+        background-color: $bg-alt;
+    }
+
+    &--isDish {
+
+        border-radius: 15px;
+        @include drop-shadow-dish
+    }
+}

@@ -1,0 +1,57 @@
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    background-color: $primary-icon-color;
+    padding: 22px 25px;
+    color: white; 
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        font-family: $font_family_roboto;
+        font-size: 16px;
+        font-weight: 300;
+
+        &--bold {
+            font-weight: $font-weight-bold;
+        }
+
+        li {
+            display: flex;
+            justify-content: flex-start;
+            gap: 11px;
+        }
+
+        .fa-solid {
+            width: 14px;
+        }
+    }
+
+    &__logo {
+        font-family: $font_family_shrikhand;
+        font-weight: $font-weight-lighter;
+        font-size: $font-size-seconary-header;
+
+    }
+
+    @media (min-width: $max-width) { 
+        flex-direction: row-reverse;
+        
+        gap: 100px;
+        padding: 50px 110px 20px 0;
+
+        &__nav {
+            flex-direction: row;
+            gap: 20px;
+
+            &--bold:nth-child(2) {
+                margin-right: 40px;
+            }
+        }
+    }
+}
