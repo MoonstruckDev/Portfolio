@@ -1,26 +1,81 @@
+@import "sass/base/_reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
+// Vars
+
+$primary-color: #1a1818;
+
+body {
+    width: 100%;
+    font-family: 'JetBrains Mono', monospace;
+}
+
 .container {
+
+    color: $primary-color;
     display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    gap: 5em;
+    gap: 2em;
 
-    border: solid black 0.2em;
+    border: solid $primary-color 0.2em;
     border-radius: 15px;
     padding: 1em 2em;
 
+    @media (max-width: 767.98px) {
+        
+    }
+
     &__icon {
         padding-right: 20px;
-        font-size: 50px;
+        font-size: 20px;
+
+        @media (max-width: 767.98px) {
+            
+        }
     }
 
     &__link {
-        font-family: 'JetBrains Mono', monospace;
-        color: inherit;
-        text-decoration: none;
-        font-size: 50px;
+        font-size: 20px;
+
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        @media (max-width: 767.98px) {
+            
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: $primary-color;
+    width: 100%;
+    margin: 0;
+    padding-top: 5px;
+    color: white;
+    display: flex;
+
+    flex-direction: column;
+    gap: 8px;
+
+
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+
+    }
+
+    &__license {
+        font-size: 10px;
+        text-align: center;
     }
 }

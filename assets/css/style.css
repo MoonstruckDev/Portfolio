@@ -1,24 +1,107 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+img {
+  display: block;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  font-family: "JetBrains Mono", monospace;
+}
+
 .container {
+  color: #1a1818;
   display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  gap: 5em;
-  border: solid black 0.2em;
+  gap: 2em;
+  border: solid #1a1818 0.2em;
   border-radius: 15px;
   padding: 1em 2em;
 }
 .container__icon {
   padding-right: 20px;
-  font-size: 50px;
+  font-size: 20px;
 }
 .container__link {
-  font-family: "JetBrains Mono", monospace;
-  color: inherit;
-  text-decoration: none;
-  font-size: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #1a1818;
+  width: 100%;
+  margin: 0;
+  padding-top: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer__license {
+  font-size: 10px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
