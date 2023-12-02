@@ -79,17 +79,29 @@ body {
 }
 .container__link {
   font-size: 20px;
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  padding-bottom: 5px;
 }
+.container__link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #1a1818;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
   background-color: #1a1818;
   width: 100%;
   margin: 0;
-  padding-top: 5px;
+  padding: 5px 0 15px 0;
   color: white;
   display: flex;
   flex-direction: column;
