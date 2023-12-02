@@ -7,7 +7,11 @@
 $primary-color: #1a1818;
 
 body {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -15,11 +19,9 @@ body {
 
     color: $primary-color;
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 2em;
+    justify-content: space-between;
+    gap: 20px;
+    
 
     border: solid $primary-color 0.2em;
     border-radius: 15px;

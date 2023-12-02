@@ -56,18 +56,19 @@ a, a:visited, a:hover, a:active {
 }
 
 body {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   font-family: "JetBrains Mono", monospace;
 }
 
 .container {
   color: #1a1818;
   display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  gap: 2em;
+  justify-content: space-between;
+  gap: 20px;
   border: solid #1a1818 0.2em;
   border-radius: 15px;
   padding: 1em 2em;
