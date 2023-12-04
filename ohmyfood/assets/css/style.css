@@ -281,6 +281,9 @@ a, a:visited, a:hover, a:active {
   position: relative;
   width: 100%;
 }
+.restaurants__cards--card--hyperlink {
+  flex: 2;
+}
 .restaurants__cards--card--img {
   object-fit: cover;
   height: 251px;
@@ -303,7 +306,6 @@ a, a:visited, a:hover, a:active {
 .restaurants__cards--card--content {
   padding: 16px 25px 12px 16px;
   display: flex;
-  justify-content: space-between;
 }
 .restaurants__cards--card--content--text {
   display: flex;
