@@ -1,53 +1,33 @@
 @import "../abstracts/variables";
 
-@mixin animation-delay($delay) {
-    animation-delay: $delay;
-}
-@mixin drop-shadow {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
+// Box Shadow Mixins
+@mixin drop-shadow { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); }
+@mixin hover-drop-shadow { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); }
+@mixin drop-shadow-dish { box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10); }
 
-@mixin drop-shadow-dish {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
-}
-
-@mixin hover-drop-shadow {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-@mixin h2-like {
-    font-size: $font-size-text;
-    font-weight: $font-weight-bold;
-    font-family: $font_family_roboto;
-}
-
-@mixin h3-like {
-    font-family: $font_family_roboto;
-    font-size: $font-size-small-header;
-    font-weight: $font-weight-bold;
-    color: white;
-}
-
+// BTN Gradients
 @mixin primary-gradient {
-    background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
-}
+    background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);}
 
+// Using the lighten feature to achieve a lighter effect whilst still using the same palette
 @mixin hover-gradient {
     background: linear-gradient(0deg, lighten($primary-color, 5%) 0%, lighten($secondary-color, 5%) 100%);
 }
 
+//  Animation Mixins
 @mixin appearAnim($delay) {
     opacity: 0;
     transform: translateY(100%);
     animation: fadeInUp .7s cubic-bezier(.47,1.64,.41,.8) forwards;
 
-
+// For each child 1 through 4 in x, apply this delay
     @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
             animation-delay: $delay + 0.2s * $i;
         }
     }
 
+// Bring the animation up and transition the opacity
     @keyframes fadeInUp {
         to {
             opacity: 1;

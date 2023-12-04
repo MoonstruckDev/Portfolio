@@ -41,10 +41,20 @@
   }
   
   input{
-    -webkit-appearance: none;
+    appearance: none;
     border-radius: 0;
   }
   
   img {
     display: block;
+  }
+
+  a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  // Added Font Reset since moz-button would force a font
+  button {
+    font: inherit;
   }

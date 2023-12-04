@@ -18,7 +18,7 @@
         font-weight: 300;
 
         &--bold {
-            font-weight: $font-weight-bold;
+            font-weight: 500;
         }
 
         li {
@@ -34,8 +34,8 @@
 
     &__logo {
         font-family: $font_family_shrikhand;
-        font-weight: $font-weight-lighter;
-        font-size: $font-size-seconary-header;
+        font-weight: 400;
+        font-size: $font-size-secondary-header;
 
     }
 

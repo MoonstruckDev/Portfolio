@@ -4,7 +4,7 @@
         object-fit: cover;
         height: 40vh;
 
-        @media (min-width: $max-width) {
+        @media (min-width: $desktop-min) {
             height: 390px;
         }
     }
@@ -20,12 +20,12 @@
     background-color: $bg-alt;
     margin-top: -50px;
 
-    @media (min-width: $max-width) {
+    @media (min-width: $desktop-min) {
         margin: -50px 192px 0 193px;
         gap: 40px;
     }
 
-    @media (min-width: $tablet-max) {
+    @media (min-width: $tablet-min) {
         margin: -50px 192px 0 193px;
         padding: 50px 210px;
         gap: 40px;
@@ -35,20 +35,24 @@
         display: flex;
         flex-direction: row;
         align-items: center;
- 
 
-        @media (min-width: $max-width) {
+        @media (min-width: $desktop-min) {
             justify-content: center;
             gap: 27px;
         }
     }
-    
+
+    &__title {
+        font-family: $font_family_shrikhand;
+        font-size: 28px;
+        font-weight: 400;
+    }
 
     &__subtitle {
         padding-bottom: 12px;
         position: relative;
         width: min-content;
-   
+
         &::after {
             content: '';
             background: $tertiary-color;
@@ -69,84 +73,92 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 12px
+        gap: 12px;
     }
-    
+
     &__cta {
         padding: 16px 49px;
         width: fit-content;
         margin: auto;
     }
 
-}
-
-.items {
-    &__dish {
-
-        overflow: hidden;
-        height: 69px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-
-        &--isColumn {
-            display: flex;
-            flex-direction: column;
-            flex: 2;
-            padding: 15px;
+    .items {
+        &__dish {
             overflow: hidden;
-            white-space: nowrap;
+            height: 69px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            &--isColumn {
+                display: flex;
+                flex-direction: column;
+                flex: 2;
+                padding: 15px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .dish {
+
+        &__title,
+        &__subtitle {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        &__subtitle {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        &__price {
+            font-size: 15px;
+            font-weight: 700;
+            padding: 0 15px 15px 0;
+        }
+
+        &__addtocart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $tertiary-color;
+
+            height: 100%;
+            width: 4em;
+            margin-right: -4em;
+
+            border-radius: 0 15px 15px 0;
+            transition: 700ms ease;
+
+            &__ico {
+                color: white;
+                font-size: 25px;
+            }
+        }
+
+        .items__dish:hover &__addtocart {
+            margin-right: 0em;
         }
     }
 }
 
-
-.dish {
-
-    &__title,
-    &__subtitle {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__addtocart {
-
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $tertiary-color;
-
-        height: 100%;
-        width: 4em;
-        margin-right: -4em;
-
-        border-radius: 0 15px 15px 0;
-        transition: 700ms ease;
-
-        &__ico {
-            color: white;
-            font-size: 25px;
-        }
-    }
-
-    .items__dish:hover &__addtocart {
-        margin-right: 0em;
-    }
-
-    // .items__dish:active &__addtocart {
-    //     margin-right: 0em;
-
-
-    // }
-
-    &__price {
-        padding: 0 15px 15px 0;
-    }
-}
-
+// Animations
+// iterates through 0,1,2;
+// Goes through the tuple with $i + 1 because sass uses 1 based indexing
+// .# interpolates the nth function into a class
+// Applies it to the children that are li of the selector we built
+// Apply appearAnim to it
 @for $i from 0 through 2 {
-    .#{nth(('starter', 'main', 'dessert'), $i + 1)} > li {
-      @include appearAnim($i * .7s);
+    .#{nth(('starter', 'main', 'dessert'), $i + 1)}>li {
+        @include appearAnim($i * 0.7s);
     }
-  }
+}

@@ -11,7 +11,6 @@
 
     &__logo {
         padding: 14px 19px 14px 16px;
-        
     }
 
     &__secondary {
@@ -21,7 +20,7 @@
         gap: 17px;
         width: 100%;
 
-        background-color: $senary-color;
+        background-color: $header-alt;
         padding: 17px;
 
         &--text-input {
@@ -29,7 +28,8 @@
             border: none;
             width: auto;
             
-            @include h2-like;
+            font-size: $font-size-text;
+            font-weight: 500;
         }
 
         &--location-dot {

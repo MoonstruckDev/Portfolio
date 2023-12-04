@@ -16,7 +16,7 @@
     transform-origin: bottom;
     transform: scale(0);
     background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 

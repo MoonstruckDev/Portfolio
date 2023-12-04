@@ -7,27 +7,26 @@
 
 // Defining Styles
 
-h1, h2, h3, p { font-family: $font_family_roboto;}
+body { font-family: $font_family_roboto;}
 
 h1 {
     font-size: $font-size-header;
-    font-weight: $font-weight-bolder;
-
+    font-weight: 700;
 }
 
 h2 {
     font-size: $font-size-text;
-    font-weight: $font-weight-bold;
+    font-weight: 500;
 }
 
 h3 {
-    font-size: $font-size-seconary-header;
-    font-weight: $font-weight-bolder;
+    font-size: $font-size-secondary-header;
+    font-weight: 700;
 }
 
 p, .menu--subtitle {
-   font-size: $font-size-seconary-header;
-   font-weight: $font-weight-light;
+   font-size: $font-size-secondary-header;
+   font-weight: 300;
 }
 
 a, a:visited, a:hover, a:active {
@@ -35,33 +34,4 @@ a, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-.menu__title {
-    font-family: $font_family_shrikhand;
-    font-size: 28px;
-    font-weight: 400;
-}
 
-.dish__title {
-    font-family: $font_family_roboto;
-    font-weight: 500;
-    font-size: 18px
-}
-
-.dish__subtitle {
-    font-family: $font_family_roboto;
-    font-size: 15px;
-    font-weight: 300;
-}
-
-.dish__price {
-    font-family: $font_family_roboto;
-    font-size: 15px;
-    font-weight: 700;
-
-}
-
-.btn {
-    font-family: $font_family_roboto;
-    font-size: 16px;
-    font-weight: 500;
-}

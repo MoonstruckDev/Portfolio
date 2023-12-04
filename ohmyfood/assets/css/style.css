@@ -43,7 +43,7 @@ table {
 }
 
 input {
-  -webkit-appearance: none;
+  appearance: none;
   border-radius: 0;
 }
 
@@ -51,7 +51,16 @@ img {
   display: block;
 }
 
-h1, h2, h3, p {
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -78,36 +87,6 @@ p, .menu--subtitle {
 a, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: none;
-}
-
-.menu__title {
-  font-family: "Shrikhand", serif;
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.dish__title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.dish__subtitle {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-}
-
-.dish__price {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.btn {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
 }
 
 .header {
@@ -138,7 +117,6 @@ a, a:visited, a:hover, a:active {
   width: auto;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
 }
 .header__secondary--location-dot {
   color: #353535;
@@ -205,23 +183,19 @@ a, a:visited, a:hover, a:active {
 .hero__title {
   padding: 39px 58px 9px 42px;
   text-align: center;
+  font-size: 40px;
 }
 .hero__subtitle {
   padding: 0 26px 0 35px;
   text-align: center;
+  margin-top: 25px;
 }
 .hero__btn {
   margin: 27px 75px 57px 82px;
   width: 218px;
   height: 50px;
 }
-@media (min-width: 1440px) {
-  .hero__title {
-    font-size: 40px;
-  }
-  .hero__subtitle {
-    margin-top: 25px;
-  }
+@media (min-width: 1024px) {
   .hero__btn {
     margin: 27px 75px 30px 82px;
   }
@@ -245,7 +219,6 @@ a, a:visited, a:hover, a:active {
   position: relative;
 }
 .how-it-works__cards--card--step {
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: white;
@@ -266,16 +239,15 @@ a, a:visited, a:hover, a:active {
 .how-it-works__cards--card--icon--purple {
   color: #9456DC;
 }
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   .how-it-works {
     padding: 48px 180px 68px 180px;
-  }
-  .how-it-works__title {
     text-align: center;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .how-it-works {
+    text-align: left;
     padding: 48px 180px 68px 180px;
     display: flex;
     flex-direction: column;
@@ -309,26 +281,24 @@ a, a:visited, a:hover, a:active {
   position: relative;
   width: 100%;
 }
+.restaurants__cards--card--img {
+  object-fit: cover;
+  height: 251px;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
 .restaurants__cards--card:is(.card--isNew)::before {
   content: "Nouveau";
   position: absolute;
   background-color: #99E2D0;
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: white;
   color: #008766;
   padding: 7px 9px;
   border-radius: 2px;
   right: 15px;
   top: 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-.restaurants__cards--card--img {
-  object-fit: cover;
-  height: 251px;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
 }
 .restaurants__cards--card--content {
   padding: 16px 25px 12px 16px;
@@ -340,7 +310,7 @@ a, a:visited, a:hover, a:active {
   flex-direction: column;
   gap: 5px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .restaurants {
     padding: 30px 180px;
   }
@@ -360,7 +330,7 @@ a, a:visited, a:hover, a:active {
   object-fit: cover;
   height: 40vh;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .hero__img {
     height: 390px;
   }
@@ -376,13 +346,13 @@ a, a:visited, a:hover, a:active {
   background-color: #F6F6F6;
   margin-top: -50px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .menu {
     margin: -50px 192px 0 193px;
     gap: 40px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   .menu {
     margin: -50px 192px 0 193px;
     padding: 50px 210px;
@@ -394,11 +364,16 @@ a, a:visited, a:hover, a:active {
   flex-direction: row;
   align-items: center;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .menu__header {
     justify-content: center;
     gap: 27px;
   }
+}
+.menu__title {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
 }
 .menu__subtitle {
   padding-bottom: 12px;
@@ -429,8 +404,7 @@ a, a:visited, a:hover, a:active {
   width: fit-content;
   margin: auto;
 }
-
-.items__dish {
+.menu .items__dish {
   overflow: hidden;
   height: 69px;
   display: flex;
@@ -438,7 +412,7 @@ a, a:visited, a:hover, a:active {
   align-items: flex-end;
   justify-content: space-between;
 }
-.items__dish--isColumn {
+.menu .items__dish--isColumn {
   display: flex;
   flex-direction: column;
   flex: 2;
@@ -446,12 +420,24 @@ a, a:visited, a:hover, a:active {
   overflow: hidden;
   white-space: nowrap;
 }
-
-.dish__title, .dish__subtitle {
+.menu .dish__title, .menu .dish__subtitle {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.dish__addtocart {
+.menu .dish__title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.menu .dish__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu .dish__price {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 15px 15px 0;
+}
+.menu .dish__addtocart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,15 +448,12 @@ a, a:visited, a:hover, a:active {
   border-radius: 0 15px 15px 0;
   transition: 700ms ease;
 }
-.dish__addtocart__ico {
+.menu .dish__addtocart__ico {
   color: white;
   font-size: 25px;
 }
-.items__dish:hover .dish__addtocart {
+.items__dish:hover .menu .dish__addtocart {
   margin-right: 0em;
-}
-.dish__price {
-  padding: 0 15px 15px 0;
 }
 
 .starter > li {
@@ -549,6 +532,8 @@ a, a:visited, a:hover, a:active {
   border-radius: 25px;
   color: white;
   border: none;
+  font-size: 16px;
+  font-weight: 500;
   background: linear-gradient(0deg, #9456DC 0%, #FF79DA 100%);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -557,7 +542,7 @@ a, a:visited, a:hover, a:active {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.card {
+.card, .card--isDish, .card--isGrey {
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -587,7 +572,7 @@ a, a:visited, a:hover, a:active {
   transform-origin: bottom;
   transform: scale(0);
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
