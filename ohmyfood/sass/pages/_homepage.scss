@@ -107,68 +107,68 @@
   .restaurants {
     padding: 30px 18px 0 17px;
     background-color: $bg-alt;
-  
+
     &__cards {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      padding: 54px 0 66px 0;
-  
-      &--card {
-        position: relative;
-        width: 100%;
-        
-        &--img {
-          object-fit: cover;
-          height: 251px;
-          border-radius: 15px 15px 0 0;
-          width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 54px 0 66px 0;
+
+        &--card {
+            position: relative;
+            width: 100%;
+
+            &--img {
+                object-fit: cover;
+                height: 251px;
+                border-radius: 15px 15px 0 0;
+                width: 100%;
+            }
+
+            &:is(.card--isNew) {
+                &::before {
+                    content: "Nouveau";
+                    position: absolute;
+                    background-color: $tertiary-color;
+                    font-size: $font-size-tiny-header;
+                    font-weight: 500;
+                    color: $btn-new;
+                    padding: 7px 9px;
+                    border-radius: 2px;
+                    right: 15px;
+                    top: 15px;
+                    @include drop-shadow;
+                }
+            }
+
+            &--content {
+                padding: 16px 25px 12px 16px;
+                display: flex;
+                justify-content: space-between;
+
+                &--text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
         }
-        
-        &:is(.card--isNew) {
-          &::before {
-            content: "Nouveau";
-            position: absolute;
-            background-color: $tertiary-color;
-            font-size: $font-size-tiny-header;
-            font-weight: 500;
-            color: $btn-new;
-            padding: 7px 9px;
-            border-radius: 2px;
-            right: 15px; // Align to the right with 15px spacing
-            top: 15px; // Add spacing from the top
-            @include drop-shadow;
-          }
-        }
-  
-        &--content {
-          padding: 16px 25px 12px 16px;
-          display: flex;
-          justify-content: space-between;
-  
-          &--text {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-          }
-        }
-      }
     }
-  
+
     @media (min-width: $desktop-min) {
-      padding: 30px 180px;
-  
-      &__cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 28px 0 30px 0;
-        gap: 50px 100px;
-  
-        // Width of cards - gap
-        a {
-          flex: calc(50% - 100px);
+        padding: 30px 180px;
+
+        &__cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 28px 0 30px 0;
+            gap: 50px 100px; // Adjust the gap between cards for responsiveness
+
+            .restaurants__cards--card {
+                flex: calc(50% - 100px); // Adjust the width of each card
+            }
         }
-      }
     }
-  }
+}
+
   

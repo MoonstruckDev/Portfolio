@@ -1,12 +1,5 @@
-<!-- Legend -->
-<!-- 
-    TBR = To Be Renamed
-
- -->
-
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -21,12 +14,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
-<!-- Loader container -->
-<div class="loader">
-    <div class="loader__spinner"></div>
-</div>
-
 <body>
+        <!-- Loader container -->
+    <div class="loader">
+        <div class="loader__spinner"></div>
+    </div>
     <header class="header loader-enabled">
         <img class="header__logo" src="assets/images/logo/ohmyfood@2x.svg" alt="Logo du site Ohmyfood">
         <div class="header__secondary">
@@ -41,11 +33,11 @@
             <section class="hero">
                 <h1 class="hero__title">Réservez le menu qui vous convient</h1>
                 <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#restaurants">
+                <form action="#restaurants" method="get">    
                     <button class="btn hero__btn">
-                        <h2>Explorer nos restaurants</h2>
+                        Explorer nos restaurants
                     </button>
-                </a>
+                </form>
             </section>
 
             <!-- Functioning (TBR) -->
@@ -82,10 +74,9 @@
             <section class="restaurants" id="restaurants">
                 <h1>Restaurants</h1>
                 <div class="restaurants__cards">
-                    <a href="restaurants/palette-du-gout.html">
-                        <article class="restaurants__cards--card card card--isNew">
-                            <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                class="restaurants__cards--card--img" alt="Image d'un plat de chez La Palette Du Gout">
+                    <article class="restaurants__cards--card card card--isNew">
+                        <a href="restaurants/palette-du-gout.html">
+                            <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurants__cards--card--img" alt="Image d'un plat de chez La Palette Du Gout">
                             <div class="restaurants__cards--card--content">
                                 <div class="restaurants__cards--card--content--text">
                                     <h3>Palette du goût</h3>
@@ -99,12 +90,11 @@
                                     </label>
                                 </div>
                             </div>
-                        </article>
-                    </a>
-                    <a href="restaurants/la-note-enchantee.html">
-                        <article class="restaurants__cards--card card card--isNew">
-                            <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                class="restaurants__cards--card--img" alt="Image d'un plat de chez La Note Enchantée">
+                        </a>
+                    </article>
+                    <article class="restaurants__cards--card card card--isNew">
+                        <a href="restaurants/la-note-enchantee.html">
+                            <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="restaurants__cards--card--img" alt="Image d'un plat de chez La Note Enchantée">
                             <div class="restaurants__cards--card--content">
                                 <div class="restaurants__cards--card--content--text">
                                     <h3>La Note Enchantée</h3>
@@ -118,12 +108,12 @@
                                     </label>
                                 </div>
                             </div>
-                        </article>
-                    </a>
-                    <a href="restaurants/a-la-francaise.html">
-                        <article class="restaurants__cards--card card">
-                            <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                class="restaurants__cards--card--img" alt="Image d'un plat de chez À La Francaise">
+                        </a>
+                    </article>
+                    
+                    <article class="restaurants__cards--card card">
+                        <a href="restaurants/a-la-francaise.html">
+                            <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="restaurants__cards--card--img" alt="Image d'un plat de chez À La Francaise">
                             <div class="restaurants__cards--card--content">
                                 <div class="restaurants__cards--card--content--text">
                                     <h3>À La Francaise</h3>
@@ -131,18 +121,18 @@
                                 </div>
                                 <div class="like">
                                     <input type="checkbox" id="like__input-3" class="like__checkbox">
-                                    <label for="like__input-1" class="like__container">
+                                    <label for="like__input-3" class="like__container">
                                         <i class="fa-regular fa-heart heart-icon card__content--heart"></i>
                                         <i class="fa-solid fa-heart heart-icon-solid card__content--heart--filled"></i>
                                     </label>
                                 </div>
                             </div>
-                        </article>
-                    </a>
-                    <a href="restaurants/le-delice-des-sens.html">
-                        <article class="restaurants__cards--card card">
-                            <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                class="restaurants__cards--card--img" alt="Image d'un plat de chez Le Delice Des Sens">
+                        </a>
+                    </article>
+                    
+                    <article class="restaurants__cards--card card">
+                        <a href="restaurants/le-delice-des-sens.html">
+                            <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="restaurants__cards--card--img" alt="Image d'un plat de chez Le Delice Des Sens">
                             <div class="restaurants__cards--card--content">
                                 <div class="restaurants__cards--card--content--text">
                                     <h3>Le Delice Des Sens</h3>
@@ -150,14 +140,15 @@
                                 </div>
                                 <div class="like">
                                     <input type="checkbox" id="like__input-4" class="like__checkbox">
-                                    <label for="like__input-1" class="like__container">
+                                    <label for="like__input-4" class="like__container">
                                         <i class="fa-regular fa-heart heart-icon card__content--heart"></i>
                                         <i class="fa-solid fa-heart heart-icon-solid card__content--heart--filled"></i>
                                     </label>
                                 </div>
                             </div>
-                        </article>
-                    </a>
+                        </a>
+                    </article>
+                    
                 </div>
             </section>
         </div>
