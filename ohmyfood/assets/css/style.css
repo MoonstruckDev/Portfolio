@@ -281,9 +281,6 @@ a, a:visited, a:hover, a:active {
   position: relative;
   width: 100%;
 }
-.restaurants__cards--card--hyperlink {
-  flex: 2;
-}
 .restaurants__cards--card--img {
   object-fit: cover;
   height: 251px;
@@ -311,6 +308,7 @@ a, a:visited, a:hover, a:active {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  flex: 2;
 }
 @media (min-width: 1024px) {
   .restaurants {
@@ -685,10 +683,6 @@ a, a:visited, a:hover, a:active {
 }
 :root {
   scroll-behavior: smooth;
-}
-
-body {
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
