@@ -118,6 +118,12 @@
             position: relative;
             width: 100%;
 
+            &--like {
+              position: absolute;
+              bottom: 20px;
+              right: 20px;
+            }
+
             &--img {
                 object-fit: cover;
                 height: 251px;

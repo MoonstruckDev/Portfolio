@@ -123,7 +123,7 @@ a, a:visited, a:hover, a:active {
 }
 .header__withArrow {
   position: absolute;
-  left: 10;
+  left: 10px;
 }
 
 .footer {
@@ -281,6 +281,11 @@ a, a:visited, a:hover, a:active {
   position: relative;
   width: 100%;
 }
+.restaurants__cards--card--like {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
 .restaurants__cards--card--img {
   object-fit: cover;
   height: 251px;
@@ -354,8 +359,7 @@ a, a:visited, a:hover, a:active {
 }
 @media (min-width: 600px) {
   .menu {
-    margin: -50px 192px 0 193px;
-    padding: 50px 210px;
+    padding: 50px 150px;
     gap: 40px;
   }
 }
@@ -452,7 +456,7 @@ a, a:visited, a:hover, a:active {
   color: white;
   font-size: 25px;
 }
-.items__dish:hover .menu .dish__addtocart {
+.menu .items__dish:hover .dish__addtocart {
   margin-right: 0em;
 }
 
@@ -572,7 +576,7 @@ a, a:visited, a:hover, a:active {
   transform-origin: bottom;
   transform: scale(0);
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
