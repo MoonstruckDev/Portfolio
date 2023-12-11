@@ -1,6 +1,6 @@
 @import "sass/base/_reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
 // Vars
 
@@ -47,6 +47,11 @@ body {
 span {
     font-weight: bold;
     color: $secondary-color;
+    font-family: 'Kalam', cursive;
+}
+
+.hero__header > span {
+    font-size: 4rem;
 }
 .hero {
     // position: relative;
@@ -59,15 +64,17 @@ span {
     &__content {
         display: flex;
         flex-flow: column wrap;
-        gap: 2rem;
+        gap: 1rem;
         justify-content: center;
     }
     &__header {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     &__subtitle {
+        margin-left: 1rem;
         width: 35rem;
+        overflow: hidden;
 
     }
 
