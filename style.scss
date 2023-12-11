@@ -7,12 +7,48 @@
 $primary-color: #1a1818;
 
 body {
+
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.header {
+    padding: 2rem;
+}
+
+.main-container {
+    margin: 0 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5rem;
+}
+
+.hero {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'JetBrains Mono', monospace;
+
+    &__arrow {
+        position: absolute;
+        cursor: pointer;
+
+
+        &--left {left: 2rem; top: 50%}
+        &--right {right: 2rem; top: 50%}
+    }
+
+    &__banner {
+        width: 100dvw;
+        height: 250px;
+        object-fit: cover;
+
+        &__tagline {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            color: white;
+        }
+    }
+        
 }
 
 .container {
@@ -24,8 +60,11 @@ body {
     
 
     border: solid $primary-color 0.2em;
-    border-radius: 15px;
+    border-radius: 1rem;
     padding: 1em 2em;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (max-width: 767.98px) {
         
