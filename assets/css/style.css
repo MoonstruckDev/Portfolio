@@ -189,7 +189,8 @@ span {
 .footer__list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
 }
 .footer__license {
   font-size: 10px;
