@@ -1,7 +1,7 @@
 const slides = [
-    {image: 'https://picsum.photos/1280/720?random=2', tagline: "Website For Booki"},
-    {image: 'https://picsum.photos/1280/720?random=3', tagline: "Website For Ohmyfood"},
-    {image: 'https://picsum.photos/1280/720?random=4', tagline: "Website For Print It!"}
+    {image: 'assets/images/slideshow/booki.png', tagline: "Website For <span>Booki</span>"},
+    {image: 'assets/images/slideshow/ohmyfood.jpg', tagline: "Website For <span>Ohmyfood</span>"},
+    {image: 'assets/images/slideshow/printit.jpg', tagline: "Website For <span>Print It!</span>"}
 ]
 
 
@@ -23,19 +23,19 @@ function updateBanner() {
 function startAutoScroll() {
     autoScroll = setInterval(() => {
         navigateSlides(1);
-    }, 5000);
+    }, 3000);
 }
 
 
-// Var Decs
-let arrowLeft = document.querySelector(".hero__arrow--left")
-let arrowRight = document.querySelector(".hero__arrow--right")
-console.log(arrowLeft)
-console.log(arrowRight)
+// // Var Decs
+// let arrowLeft = document.querySelector(".hero__arrow--left")
+// let arrowRight = document.querySelector(".hero__arrow--right")
+// console.log(arrowLeft)
+// console.log(arrowRight)
 
 
-arrowLeft.addEventListener("click", () => navigateSlides(-1))
-arrowRight.addEventListener("click", () => navigateSlides(1))
+// arrowLeft.addEventListener("click", () => navigateSlides(-1))
+// arrowRight.addEventListener("click", () => navigateSlides(1))
 
 startAutoScroll();
 
