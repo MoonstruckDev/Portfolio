@@ -59,8 +59,6 @@ a, a:visited, a:hover, a:active {
 body {
   position: relative;
   font-family: "JetBrains Mono", monospace;
-  min-height: 100%;
-  min-height: 100vh;
 }
 
 .header {
@@ -103,30 +101,30 @@ span {
 
 .hero {
   display: flex;
+  gap: 1rem;
+  margin: 4rem 0;
   justify-content: center;
-  gap: 4rem;
 }
 .hero__content {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   gap: 1rem;
   justify-content: center;
 }
 .hero__header {
   font-size: 2rem;
+  text-wrap: nowrap;
 }
 .hero__subtitle {
   margin-left: 1rem;
   width: 35rem;
-  overflow: hidden;
 }
 .hero__carousel {
   position: relative;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 4rem;
 }
 .hero__carousel__arrow {
   position: absolute;
@@ -141,12 +139,22 @@ span {
   top: 50%;
 }
 .hero__banner {
-  width: 650px;
-  height: 400px;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
+  position: relative;
 }
 .hero__banner__tagline {
+  background-color: whitesmoke;
+  color: black;
   font-size: 1rem;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem 0 0 0;
+  box-shadow: -6px -4px 5px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
 }
 
 .container {
@@ -197,8 +205,6 @@ span {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  position: absolute;
-  bottom: 0;
 }
 .footer__list {
   display: flex;

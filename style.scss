@@ -10,8 +10,6 @@ $secondary-color: #be42f0;
 body {
     position: relative;
     font-family: 'JetBrains Mono', monospace;
-    min-height: 100%;
-    min-height: 100vh;
 }
 
 .header {
@@ -56,36 +54,45 @@ span {
 .hero {
     // position: relative;
     display: flex;
+
+    gap: 1rem;
+    margin: 4rem 0;
     justify-content: center;
-    gap: 4rem;
 
 
 
     &__content {
         display: flex;
-        flex-flow: column wrap;
+        flex-direction: column;
         gap: 1rem;
         justify-content: center;
+        
+        
+
     }
     &__header {
         font-size: 2rem;
+        text-wrap: nowrap;
+
+
     }
 
     &__subtitle {
         margin-left: 1rem;
         width: 35rem;
-        overflow: hidden;
+
+
 
     }
 
     &__carousel {
-        // background-image: url("assets/images/mac-os-window.svg");
+ 
         position: relative;
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column;
         align-items: center;
         gap: 2rem;
-        margin-top: 4rem;
+
         // border: black solid .3rem;
         // border-radius: 25px 25px 25px 25px;
 
@@ -101,12 +108,24 @@ span {
     }
 
     &__banner {
-        width: 650px;
-        height: 400px;
+
+        width: 100%;
+        height: 300px;
         object-fit: cover;
+        position: relative;
+
 
         &__tagline {
+            background-color: whitesmoke;
+            color: black;
             font-size: 1rem;
+            position: absolute;
+            padding: .5rem 1rem;
+            border-radius: 1rem 0 0 0;
+            box-shadow: -6px -4px 5px 0px rgba(0,0,0,0.15 );
+            overflow: hidden;
+            bottom: 0;
+            right: 0;
         }
     }
         
@@ -188,8 +207,8 @@ span {
     flex-direction: column;
     gap: 8px;
 
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
 
 
     &__list {
