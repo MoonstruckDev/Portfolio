@@ -192,11 +192,13 @@ span {
   background-color: #1a181a;
   width: 100%;
   margin: 0;
-  padding: 5px 0 15px 0;
+  padding: 1rem 0;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: absolute;
+  bottom: 0;
 }
 .footer__list {
   display: flex;
