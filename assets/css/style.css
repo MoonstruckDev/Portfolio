@@ -76,6 +76,12 @@ body {
   height: 2.5rem;
   aspect-ratio: 1/1;
 }
+.header__nav, .header .nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
 
 .main-container {
   margin: 0 2rem;
@@ -86,6 +92,7 @@ body {
 
 span {
   font-weight: bold;
+  color: #be42f0;
 }
 
 .hero {
@@ -135,7 +142,7 @@ span {
 }
 
 .container {
-  color: #1a1818;
+  color: #1a181a;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -145,13 +152,10 @@ span {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.container::before {
-  content: "Websites";
+.container__title {
   font-size: 1.5rem;
-  font-weight: 700;
-  width: min-content;
-  padding-bottom: 0.25rem;
-  border-bottom: #1a1818 0.2rem solid;
+  border-bottom: #1a181a 0.25rem solid;
+  padding-bottom: 0.5rem;
 }
 .container__icon {
   padding-right: 20px;
@@ -173,11 +177,11 @@ span {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: #1a1818;
+  background-color: #1a181a;
 }
 
 .footer {
-  background-color: #1a1818;
+  background-color: #1a181a;
   width: 100%;
   margin: 0;
   padding: 5px 0 15px 0;
