@@ -21,16 +21,38 @@
 
 <body>
     <header class="header">
-        <h2>testing</h2>
+        <h2>WIP: 11/12/2023</h2>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="list__item"><a href="#"><span>Hi!</span></a></li>
+                <li class="list__item"><a href="#">Homepage</a></li>
+                <li class="list__item"><a href="#">Websites</a></li>
+                <li class="list__item"><a href="#">Contact</a></li>
+            </ul>
+            <img class="header__logo" src="assets/images/wave.gif" alt="MoonstruckDev's profile picture">
+        </nav>
+       
+
     </header>
     <main class="main-container">
-        <div class="hero">
-            <img src="assets/images/arrow_left.png" class="hero__arrow hero__arrow--left" alt="arrow left">
-            <img src="assets/images/arrow_right.png" class="hero__arrow hero__arrow--right" alt="arrow right">
-            <img src="https://picsum.photos/1280/720?random=1" alt="" class="hero__banner">
-            <p class="hero__banner__tagline">Website For <span>Booki</span></p>
-        </div>
-        <div class="container">
+        <section class="hero">
+            <div class="hero__content">
+            <h2 class="hero__header">Coding the websites <br><span>YOU design.</span></h2>
+            <p class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu viverra lacus, a malesuada nisl.
+                Mauris eu sapien nec orci aliquet ultricies. Integer dapibus nibh vel dui hendrerit, non viverra diam auctor.
+                Nunc justo est, congue et velit consequat, pretium ultricies neque. In auctor nec nibh in placerat. 
+                Ut sit amet nibh non nibh consectetur fringilla. Etiam sed interdum lorem, a ultricies massa. Vestibulum iaculis mauris eros,
+                consectetur rhoncus sapien rutrum eget.</p>
+            </div>
+            <aside class="hero__carousel">
+                <!-- <img src="assets/images/arrow_left.png" class="hero__carousel__arrow hero__carousel__arrow--left" alt="arrow left">
+                <img src="assets/images/arrow_right.png" class="hero__carousel__arrow hero__carousel__arrow--right" alt="arrow right"> -->
+                <img src="assets/images/slideshow/ohmyfood.jpg" alt="" class="hero__banner">
+                <p class="hero__banner__tagline">Website For <span>Ohmyfood</span></p>
+            </aside>
+        </section>
+        <section class="container">
+            <h2 class="container__title">Website List</h2>
             <a href="https://booki.moonstruck.pro" class="container__link">
                 <i class="container__icon fa-solid fa-folder"></i>Booki
             </a>
@@ -40,13 +62,13 @@
             <a href="https://printit.moonstruck.pro" class="container__link">
                 <i class="container__icon fa-solid fa-folder"></i>PrintIt!
             </a>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
         <ul class="footer__list">
             <li class="footer__link">
-                <a href="https://github.com/MoonstruckSpirit" target="_blank" rel="noopener noreferrer">Github</a>
+                <a href="https://github.com/MoonstruckDev" target="_blank" rel="noopener noreferrer">Github</a>
             </li>
             <li class="footer__link">
                 <a href="mailto:your@email.com">Email</a>

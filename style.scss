@@ -4,15 +4,37 @@
 
 // Vars
 
-$primary-color: #1a1818;
+$primary-color: #1a181a;
+$secondary-color: #be42f0;
 
 body {
-
+    position: relative;
     font-family: 'JetBrains Mono', monospace;
+    min-height: 100%;
+    min-height: 100vh;
 }
 
 .header {
     padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+
+    &__logo {
+        border: black 2px solid;
+        border-radius: 50%;
+        height: 2.5rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__nav, .nav__list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
 }
 
 .main-container {
@@ -22,12 +44,46 @@ body {
     gap: 5rem;
 }
 
+span {
+    font-weight: bold;
+    color: $secondary-color;
+}
 .hero {
-    position: relative;
+    // position: relative;
     display: flex;
     justify-content: center;
+    gap: 4rem;
 
-    &__arrow {
+
+
+    &__content {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+    &__header {
+        font-size: 3rem;
+    }
+
+    &__subtitle {
+        width: 35rem;
+
+    }
+
+    &__carousel {
+        // background-image: url("assets/images/mac-os-window.svg");
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 4rem;
+        // border: black solid .3rem;
+        // border-radius: 25px 25px 25px 25px;
+
+
+       &__arrow {
         position: absolute;
         cursor: pointer;
 
@@ -35,17 +91,15 @@ body {
         &--left {left: 2rem; top: 50%}
         &--right {right: 2rem; top: 50%}
     }
+    }
 
     &__banner {
-        width: 100dvw;
-        height: 250px;
+        width: 650px;
+        height: 400px;
         object-fit: cover;
 
         &__tagline {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            color: white;
+            font-size: 1rem;
         }
     }
         
@@ -55,16 +109,31 @@ body {
 
     color: $primary-color;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     gap: 20px;
     
 
-    border: solid $primary-color 0.2em;
     border-radius: 1rem;
-    padding: 1em 2em;
+    padding: 2rem 2rem;
 
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &__title {
+        font-size: 1.5rem;
+        border-bottom: $primary-color .25rem solid;
+        padding-bottom: .5rem;
+    }
+
+    // &::before {
+    //     content: "Websites";
+    //     font-size: 1.5rem;
+    //     font-weight: 700;
+    //     width: min-content;
+    //     padding-bottom: .25rem;
+    //     border-bottom: $primary-color 0.2rem solid;
+    // }
 
     @media (max-width: 767.98px) {
         
@@ -86,6 +155,7 @@ body {
         align-items: center;
         flex-wrap: nowrap;
         padding-bottom: 5px;
+        width: min-content;
 
         &:hover::after {
             content: '';
@@ -100,8 +170,7 @@ body {
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
+
     background-color: $primary-color;
     width: 100%;
     margin: 0;
@@ -117,7 +186,8 @@ body {
     &__list {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 2rem;
 
 
     }
