@@ -96,6 +96,7 @@ span {
         gap: 2rem;
         overflow: hidden;
 
+
         // border: black solid .3rem;
         // border-radius: 25px 25px 25px 25px;
 
@@ -118,6 +119,9 @@ span {
         border-radius: 1rem;
 
 
+
+
+
         &__tagline {
             background-color: whitesmoke;
             color: black;
@@ -126,7 +130,7 @@ span {
             border-radius: 1rem 1rem 0 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             bottom: 0;
-            right: 0;
+            position: absolute;
         }
     }
         
