@@ -92,6 +92,7 @@ span {
         flex-flow: column;
         align-items: center;
         gap: 2rem;
+        overflow: hidden;
 
         // border: black solid .3rem;
         // border-radius: 25px 25px 25px 25px;
@@ -119,11 +120,9 @@ span {
             background-color: whitesmoke;
             color: black;
             font-size: 1rem;
-            position: absolute;
             padding: .5rem 1rem;
-            border-radius: 1rem 0 0 0;
-            box-shadow: -6px -4px 5px 0px rgba(0,0,0,0.15 );
-            overflow: hidden;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5 );
             bottom: 0;
             right: 0;
         }
