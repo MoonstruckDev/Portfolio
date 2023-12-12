@@ -59,6 +59,7 @@ a, a:visited, a:hover, a:active {
 body {
   position: relative;
   font-family: "JetBrains Mono", monospace;
+  background-color: whitesmoke;
 }
 
 .header {
@@ -68,6 +69,7 @@ body {
   justify-content: space-between;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   z-index: 2;
+  background-color: white;
 }
 .header__logo {
   border: black 2px solid;
@@ -101,7 +103,7 @@ span {
 
 .hero {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   margin: 4rem 0;
   justify-content: center;
 }
@@ -125,6 +127,7 @@ span {
   flex-flow: column;
   align-items: center;
   gap: 2rem;
+  overflow: hidden;
 }
 .hero__carousel__arrow {
   position: absolute;
@@ -143,16 +146,15 @@ span {
   height: 300px;
   object-fit: cover;
   position: relative;
+  border-radius: 1rem;
 }
 .hero__banner__tagline {
   background-color: whitesmoke;
   color: black;
   font-size: 1rem;
-  position: absolute;
   padding: 0.5rem 1rem;
-  border-radius: 1rem 0 0 0;
-  box-shadow: -6px -4px 5px 0px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   bottom: 0;
   right: 0;
 }

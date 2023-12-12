@@ -10,6 +10,7 @@ $secondary-color: #be42f0;
 body {
     position: relative;
     font-family: 'JetBrains Mono', monospace;
+    background-color: whitesmoke;
 }
 
 .header {
@@ -19,6 +20,7 @@ body {
     justify-content: space-between;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 2;
+    background-color: white;
 
     &__logo {
         border: black 2px solid;
@@ -55,7 +57,7 @@ span {
     // position: relative;
     display: flex;
 
-    gap: 1rem;
+    gap: 3rem;
     margin: 4rem 0;
     justify-content: center;
 
@@ -102,7 +104,6 @@ span {
         position: absolute;
         cursor: pointer;
 
-
         &--left {left: 2rem; top: 50%}
         &--right {right: 2rem; top: 50%}
     }
@@ -114,6 +115,7 @@ span {
         height: 300px;
         object-fit: cover;
         position: relative;
+        border-radius: 1rem;
 
 
         &__tagline {
@@ -122,7 +124,7 @@ span {
             font-size: 1rem;
             padding: .5rem 1rem;
             border-radius: 1rem 1rem 0 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5 );
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             bottom: 0;
             right: 0;
         }
